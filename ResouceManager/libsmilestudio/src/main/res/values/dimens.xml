@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_1">1dip</dimen>
+    <dimen name="padding_2">2dip</dimen>
+    <dimen name="padding_5">5dip</dimen>
+    <dimen name="padding_8">8dip</dimen>
+    <dimen name="padding_10">10dip</dimen>
+    <dimen name="padding_12">12dip</dimen>
+    <dimen name="padding_16">16dip</dimen>
+    <dimen name="padding_24">24dip</dimen>
+    <dimen name="padding_25">25dip</dimen>
+    <dimen name="padding_32">32dip</dimen>
+    <dimen name="padding_42">42dip</dimen>
+    <dimen name="padding_54">54dip</dimen>
+    <dimen name="padding_60">60dip</dimen>
+    <dimen name="padding_64">64dip</dimen>
+    <dimen name="padding_72">72dip</dimen>
+    <dimen name="padding_84">84dip</dimen>
+</resources>

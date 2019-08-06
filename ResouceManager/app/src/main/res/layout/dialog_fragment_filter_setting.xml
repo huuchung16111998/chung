@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_5"
+        android:background="@drawable/background_spinner">
+
+        <Spinner
+            android:id="@+id/spinner_company"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dialog"></Spinner>
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_drop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_5"
+        android:background="@drawable/background_spinner">
+
+        <Spinner
+            android:id="@+id/spinner_department"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dialog"></Spinner>
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_drop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_5"
+        android:background="@drawable/background_spinner">
+
+        <TextView
+            android:id="@+id/tv_profile"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:text="Chọn nhân viên"></TextView>
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_drop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_5"
+        android:background="@drawable/background_spinner">
+
+        <Spinner
+            android:id="@+id/spinner_resouce_type"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dialog"></Spinner>
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_drop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_5"
+        android:background="@drawable/background_spinner">
+
+        <Spinner
+            android:id="@+id/spinner_resouce_status"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dialog"></Spinner>
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_drop" />
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_5"
+        app:boxCornerRadiusBottomEnd="30dip"
+        app:boxCornerRadiusBottomStart="30dip"
+        app:boxCornerRadiusTopEnd="30dip"
+        app:boxCornerRadiusTopStart="30dip"
+        app:boxStrokeColor="@color/orange">
+
+        <EditText
+            android:id="@+id/edt_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_keyword_search"
+            android:inputType="text"
+            android:padding="@dimen/padding_5" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_button_filter" />
+</LinearLayout>

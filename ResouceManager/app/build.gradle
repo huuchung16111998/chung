@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.smile.studio.resourcemanager"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../com.smile.studio.resoucemanager_passsword_09121990.jks")
+            storePassword '09121990'
+            keyAlias 'com.smile.studio.resoucemanager'
+            keyPassword '09121990'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            shrinkResources true
+            zipAlignEnabled true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            ext.enableCrashlytics = false
+        }
+    }
+
+    flavorDimensions "flavor"
+    productFlavors {
+        chplay {
+            dimension "flavor"
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def project = "ResouceManager"
+            def SEP = "_"
+            def flavor = variant.productFlavors[0].name
+            def buildType = variant.buildType.name
+            def version = "ver" + variant.versionName
+            def date = new Date()
+            def formattedDate = date.format('ddMMyy_HHmm')
+            def newApkName = project + SEP + flavor + SEP + buildType + SEP + version /*+ SEP + formattedDate*/ + ".apk"
+            outputFileName = newApkName
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    implementation project(':libsmilestudio')
+    implementation('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
+    implementation 'com.github.nisrulz:screenshott:2.0.0'
+}

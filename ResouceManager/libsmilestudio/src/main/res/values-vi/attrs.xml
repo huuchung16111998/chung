@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="TvRecyclerView" tools:ignore="MissingDefaultResource">
+        <attr name="android:orientation" tools:ignore="ResourceName" />
+        <attr name="tv_layoutManager" format="string" />
+        <attr name="tv_numColumns" format="integer" />
+        <attr name="tv_numRows" format="integer" />
+
+        <attr name="tv_selectedItemCentered" format="boolean" />
+        <attr name="tv_loadMoreBeforehandCount" format="integer" />
+        <attr name="tv_selectedItemOffsetStart" format="dimension" />
+        <attr name="tv_selectedItemOffsetEnd" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="DrawerNavigatorView" tools:ignore="MissingDefaultResource">
+        <attr name="categoryWidthSize" format="dimension" />
+        <attr name="categoryBackground" format="reference" />
+        <attr name="contentBackground" format="reference" />
+        <attr name="contentScale" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="BorderView" tools:ignore="MissingDefaultResource">
+        <attr name="focusDrawable" format="reference" />
+        <attr name="focusScale" format="float" />
+        <attr name="focusBoxPadding" format="dimension" />
+    </declare-styleable>
+
+
+    <attr name="scrollMode" tools:ignore="MissingDefaultResource">
+        <enum name="scrollOverEdge" value="0" />
+        <enum name="scrollCenteringPosition" value="2" />
+        <enum name="scrollStickAtEdge" value="1" />
+    </attr>
+
+</resources>

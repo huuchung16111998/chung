@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/background_dialog_profile"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingTop="50dip"
+        android:paddingRight="@dimen/padding_5"
+        android:paddingBottom="@dimen/padding_5">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_5"
+            app:boxCornerRadiusBottomEnd="30dip"
+            app:boxCornerRadiusBottomStart="30dip"
+            app:boxCornerRadiusTopEnd="30dip"
+            app:boxCornerRadiusTopStart="30dip"
+            app:boxStrokeColor="@color/orange">
+
+            <EditText
+                android:id="@+id/edt_identification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_print_identification"
+                android:inputType="text"
+                android:nextFocusDown="@id/edt_madein"
+                android:padding="@dimen/padding_5"
+                android:text="TS" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_5"
+            app:boxCornerRadiusBottomEnd="30dip"
+            app:boxCornerRadiusBottomStart="30dip"
+            app:boxCornerRadiusTopEnd="30dip"
+            app:boxCornerRadiusTopStart="30dip"
+            app:boxStrokeColor="@color/orange">
+
+            <EditText
+                android:id="@+id/edt_start_index"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_print_start"
+                android:inputType="number"
+                android:nextFocusDown="@id/edt_madein"
+                android:padding="@dimen/padding_5"
+                android:text="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_5"
+            app:boxCornerRadiusBottomEnd="30dip"
+            app:boxCornerRadiusBottomStart="30dip"
+            app:boxCornerRadiusTopEnd="30dip"
+            app:boxCornerRadiusTopStart="30dip"
+            app:boxStrokeColor="@color/orange">
+
+            <EditText
+                android:id="@+id/edt_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_print_total"
+                android:inputType="number"
+                android:nextFocusDown="@id/edt_madein"
+                android:padding="@dimen/padding_5"
+                android:text="88" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_5"
+            app:boxCornerRadiusBottomEnd="30dip"
+            app:boxCornerRadiusBottomStart="30dip"
+            app:boxCornerRadiusTopEnd="30dip"
+            app:boxCornerRadiusTopStart="30dip"
+            app:boxStrokeColor="@color/orange">
+
+            <EditText
+                android:id="@+id/edt_columns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_print_columns"
+                android:inputType="number"
+                android:nextFocusDown="@id/edt_madein"
+                android:padding="@dimen/padding_5"
+                android:text="8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_print"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_button_print" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="@dimen/com_facebook_profilepictureview_preset_size_normal"
+        android:layout_height="@dimen/com_facebook_profilepictureview_preset_size_normal"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/all_circle_color_primary_background"
+        android:padding="@dimen/padding_2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_printer" />
+</RelativeLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.smile.studio.resoucemanager.fragment.ResouceByOwnerFragment"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/groups_profile">
+
+        <RelativeLayout
+            android:id="@+id/groups_resouce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/groups_qrcode"
+                android:layout_width="@dimen/padding_84"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_qrcode"
+                    android:layout_width="@dimen/padding_84"
+                    android:layout_height="@dimen/padding_84"
+                    android:elevation="@dimen/padding_5" />
+
+                <TextView
+                    android:id="@+id/tv_qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_5"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_5"
+                android:layout_toLeftOf="@+id/groups_qrcode"
+                app:boxCornerRadiusBottomEnd="30dip"
+                app:boxCornerRadiusBottomStart="30dip"
+                app:boxCornerRadiusTopEnd="30dip"
+                app:boxCornerRadiusTopStart="30dip"
+                app:boxStrokeColor="@color/orange">
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_resouce_name"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groups_qrcode"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    android:background="@drawable/background_spinner">
+
+                    <Spinner
+                        android:id="@+id/spinner_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:spinnerMode="dialog"></Spinner>
+
+                    <ImageView
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_drop" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    android:background="@drawable/background_spinner">
+
+                    <TextView
+                        android:id="@+id/tv_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_16"
+                        android:paddingRight="@dimen/padding_16"
+                        android:text="Chọn nhân viên"></TextView>
+
+                    <ImageView
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_drop" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    android:background="@drawable/background_spinner">
+
+                    <Spinner
+                        android:id="@+id/spinner_resouce_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:spinnerMode="dialog"></Spinner>
+
+                    <ImageView
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_drop" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    android:background="@drawable/background_spinner">
+
+                    <Spinner
+                        android:id="@+id/spinner_resouce_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:spinnerMode="dialog"></Spinner>
+
+                    <ImageView
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_drop" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    app:boxCornerRadiusBottomEnd="30dip"
+                    app:boxCornerRadiusBottomStart="30dip"
+                    app:boxCornerRadiusTopEnd="30dip"
+                    app:boxCornerRadiusTopStart="30dip"
+                    app:boxStrokeColor="@color/orange">
+
+                    <EditText
+                        android:id="@+id/edt_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_detail_resouce"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_5" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    app:boxCornerRadiusBottomEnd="30dip"
+                    app:boxCornerRadiusBottomStart="30dip"
+                    app:boxCornerRadiusTopEnd="30dip"
+                    app:boxCornerRadiusTopStart="30dip"
+                    app:boxStrokeColor="@color/orange">
+
+                    <EditText
+                        android:id="@+id/edt_serial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_serie"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_5" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    app:boxCornerRadiusBottomEnd="30dip"
+                    app:boxCornerRadiusBottomStart="30dip"
+                    app:boxCornerRadiusTopEnd="30dip"
+                    app:boxCornerRadiusTopStart="30dip"
+                    app:boxStrokeColor="@color/orange">
+
+                    <EditText
+                        android:id="@+id/edt_tech_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_tech_value"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_5" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    app:boxCornerRadiusBottomEnd="30dip"
+                    app:boxCornerRadiusBottomStart="30dip"
+                    app:boxCornerRadiusTopEnd="30dip"
+                    app:boxCornerRadiusTopStart="30dip"
+                    app:boxStrokeColor="@color/orange">
+
+                    <EditText
+                        android:id="@+id/edt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_price"
+                        android:inputType="number"
+                        android:nextFocusDown="@id/edt_madein"
+                        android:padding="@dimen/padding_5" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_5"
+                    app:boxCornerRadiusBottomEnd="30dip"
+                    app:boxCornerRadiusBottomStart="30dip"
+                    app:boxCornerRadiusTopEnd="30dip"
+                    app:boxCornerRadiusTopStart="30dip"
+                    app:boxStrokeColor="@color/orange">
+
+                    <EditText
+                        android:id="@+id/edt_madein"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_madein"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_5" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_5"
+                    android:paddingRight="@dimen/padding_5">
+
+                    <TextView
+                        android:id="@+id/tv_purchase_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_spinner"
+                        android:hint="@string/hint_purchase_date"
+                        android:nextFocusRight="@+id/tv_delivery_date"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tv_delivery_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_spinner"
+                        android:hint="@string/hint_delivery_date"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/groups_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_5">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="@dimen/padding_10"
+            android:background="@drawable/ic_line_shape"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_5"
+                android:layout_weight="1"
+                android:text="@string/title_button_save" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:layout_weight="1"
+                android:text="@string/title_button_cancel" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "9aad4c78-105f-471e-b07c-947d59d36be8",
+		"name": "Icom-Vietlott",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "Username",
+							"value": "gianglv@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "Aa@123456",
+							"type": "text"
+						},
+						{
+							"key": "facebook_token",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "Authen.IcomXoso",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "xososecurity@i-com",
+							"type": "text"
+						},
+						{
+							"key": "Device",
+							"value": "Phone",
+							"type": "text"
+						},
+						{
+							"key": "useRefreshTokens",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "deviceOs",
+							"value": "Android",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://api.oss.cdn.i-com.vn/token",
+				"description": "\nGet token default : Sử dụng khi chạy lần đầu tiên hoặc fresh token.\nResonpse : adđ token vào header với định  dạng \nAuthorization : Bearer \"yourtoken\"\n\n \n"
+			},
+			"response": []
+		},
+		{
+			"name": "Map - Lấy tất cả các tỉnh có địa điểm bán VL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": "https://api.oss.cdn.i-com.vn//Lottery/GetCitys",
+				"description": "use :  Lấy tất cả các tỉnh có địa điểm bán Vietllott\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Map -Lấy tất cả các location bán  VL ở  trong tỉnh ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "https://api.oss.cdn.i-com.vn/Lottery/GetLocations?cityid=1&destrictid=0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"oss",
+						"cdn",
+						"i-com",
+						"vn"
+					],
+					"path": [
+						"",
+						"Lottery",
+						"GetLocations"
+					],
+					"query": [
+						{
+							"key": "cityid",
+							"value": "1"
+						},
+						{
+							"key": "destrictid",
+							"value": "0"
+						}
+					]
+				},
+				"description": "use :  Lấy tất cả các location  bán ở  trong tỉnh có điểm bán VL\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Thống kê kết của một loại xs ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "https://api.oss.cdn.i-com.vn/Lottery/GetNumbers?type=power",
+					"protocol": "https",
+					"host": [
+						"api",
+						"oss",
+						"cdn",
+						"i-com",
+						"vn"
+					],
+					"path": [
+						"Lottery",
+						"GetNumbers"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "power"
+						}
+					]
+				},
+				"description": "use : Thống kê kết của một loại xs \nrequest \n  - type :  (vietlot,power,max) \n\n-reponse : thống kê từng loại xổ số"
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng  kí  tài khoản sử dụng  email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"AccessToken\":\"\",\"CheckSum\":\"a1dff0a475a56df9149d72d7348d14f6\",\"Device\":\"Phone\",\"DeviceID\":\"0785cfb7d8c8f124\",\"DeviceOs\":\"Android\",\"DeviceToken\":\"\",\"Email\":\"duyphan.uet@gmail.com\",\"Name\":\"\",\"PassWord\":\"123456\",\"Phone\":\"\",\"Provider\":\"\"}"
+				},
+				"url": "https://api.oss.cdn.i-com.vn/Auth/Register",
+				"description": "use : Đăng  kí  tài khoản sử dụng  email\nrequest \n\t- type : body request \n\t- String key = Email + PassWord + AccessToken + \t  Provider + DeviceOs + Device + DeviceID + DeviceToken + CHECKSUMKEY;\n        this.CheckSum = CommonUtils.md5(key);\n    CheckSum = md5(key);\n    CHECKSUMKEY = !@#$$#@!\n\n- Reponse : Trả về thông tin user"
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy video kết quả theo ngày",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "https://api.oss.cdn.i-com.vn/Lottery/GetContentsByKeyword?keyword=13-03-2018&mediaType=10&option=date",
+					"protocol": "https",
+					"host": [
+						"api",
+						"oss",
+						"cdn",
+						"i-com",
+						"vn"
+					],
+					"path": [
+						"Lottery",
+						"GetContentsByKeyword"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "13-03-2018"
+						},
+						{
+							"key": "mediaType",
+							"value": "10"
+						},
+						{
+							"key": "option",
+							"value": "date"
+						}
+					]
+				},
+				"description": "use : Khi muốn kiếm tra hoặc muốn play video trường quay ảo \nrequest \n\t- keyword : Ngày muốn lấy video format dd-MM-yyyy\n\t- các giá trị khác mặc định như request\n-reponse : link play trả về trong object stream"
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách kết quả xổ số mới nhất",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "https://api.oss.cdn.i-com.vn/Lottery/GetDate?type=power&page=1&pagesize=10&order=new",
+					"protocol": "https",
+					"host": [
+						"api",
+						"oss",
+						"cdn",
+						"i-com",
+						"vn"
+					],
+					"path": [
+						"",
+						"Lottery",
+						"GetDate"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "power"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "10"
+						},
+						{
+							"key": "order",
+							"value": "new"
+						}
+					]
+				},
+				"description": "use : Khi lấy kết quả số số \nrequest \n\t- type : Loại xs (vietlot,power,max)\n\t- page : trang cần lấy\n\t- pagesize: Số lượng lấy trong 1 trang"
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng  kí  tài khoản sử dụng  FB",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"AccessToken\":\"\",\"CheckSum\":\"a1dff0a475a56df9149d72d7348d14f6\",\"Device\":\"Phone\",\"DeviceID\":\"0785cfb7d8c8f124\",\"DeviceOs\":\"Android\",\"DeviceToken\":\"\",\"Email\":\"duyphan.uet@gmail.com\",\"Name\":\"\",\"PassWord\":\"123456\",\"Phone\":\"\",\"Provider\":\"\"}"
+				},
+				"url": "https://api.oss.cdn.i-com.vn/Auth/LoginExternal",
+				"description": "use : Đăng  kí  tài khoản sử dụng FB\nrequest \n\t- type : body request \n\t- String key = Email + PassWord + AccessToken + \t  Provider + DeviceOs + Device + DeviceID + DeviceToken + CHECKSUMKEY;\n        this.CheckSum = CommonUtils.md5(key);\n    CheckSum = md5(key);\n    CHECKSUMKEY = !@#$$#@!\n\n- Reponse : Trả về thông tin user"
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy giải trị giải thưởng mới nhất",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "https://api.oss.cdn.i-com.vn/Lottery/GetPrice?type=power",
+					"protocol": "https",
+					"host": [
+						"api",
+						"oss",
+						"cdn",
+						"i-com",
+						"vn"
+					],
+					"path": [
+						"Lottery",
+						"GetPrice"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "power"
+						}
+					]
+				},
+				"description": "use : Lấy giải trị giải thưởng mới nhất\nrequest \n\t- type :  (vietlot,power,max) \n\n-reponse : Trả về giá trị giải thưởng mới nhất"
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thời gian đếm ngược quay thưởng của loại xs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": "https://api.oss.cdn.i-com.vn//Lottery/GetTime",
+				"description": "use : Lấy thời gian đếm ngược quay thưởng hiện tại\nrequest \n\t- type :  (vietlot,power,max)  Nếu type = null sẽ tự động trả về theo ngày mới nhất\n\n- Reponse : Trả về thời gian đếm ngược quay thưởng của loại xs"
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy thông tin người dùng",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": "https://api.oss.cdn.i-com.vn/Account/GetAccountInfo",
+				"description": "use : Đăng  kí  tài khoản sử dụng FB\nrequest \n   - Thay token trong header request \n\n- Reponse : Trả về thông tin user"
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng  nhập tài khoản sử dụng email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XJPi78Pg9iaood-dzDHpW-Iwk5LbXwuXJOgf84MtsNpdM41hgoweFBd0y0lU4dOVIoIzzR-ErWFwyL96UNar0eYzp4ygKNykyTTEJCXf7szWHeK-AKrd_wOAKLpc3IhbxlJepR5qcfE6nKvS4ehOTFen8gvuTDgB8wV1Jw1GqksWMCZnsyx8sAhvn2bQvZhppdUHuqn55abDW2ma0mMwgYjQoiCV4oq8NV6rSubkGctxh4j5dR0vxJc6-b5_L5uFWCGASgEhpuP2R4ZYNskp0-pqJbPAlTA7tztulWXmoUOxXRjXFDreb7Jn76B9HoRVhH7QqmH71peUeI6ZE3ss25LUdEaSiq1HTQsH1EAzuTZIaHNYI4Js1EKupCMz7fT_EosvIxefvsgOEptZuiQRDb5vTnaFLdlE3kclfKycaYI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"AccessToken\":\"\",\"CheckSum\":\"a1dff0a475a56df9149d72d7348d14f6\",\"Device\":\"Phone\",\"DeviceID\":\"0785cfb7d8c8f124\",\"DeviceOs\":\"Android\",\"DeviceToken\":\"\",\"Email\":\"duyphan.uet@gmail.com\",\"Name\":\"\",\"PassWord\":\"123456\",\"Phone\":\"\",\"Provider\":\"\"}"
+				},
+				"url": "https://api.oss.cdn.i-com.vn/Auth/Login",
+				"description": "use : Đăng nhập tài khoản sử dụng email\nrequest \n\t- type : body request \n\t- String key = Email + PassWord + AccessToken + \t  Provider + DeviceOs + Device + DeviceID + DeviceToken + CHECKSUMKEY;\n        this.CheckSum = CommonUtils.md5(key);\n    CheckSum = md5(key);\n    CHECKSUMKEY = !@#$$#@!\n\n- Reponse : Trả về thông tin user"
+			},
+			"response": []
+		}
+	]
+}

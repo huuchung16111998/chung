@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name" translatable="false">LibSmileStudio</string>
+    <string name="message_error_connect_internet">Lỗi kết nối internet!!!</string>
+    <string name="retry">Thử lại</string>
+</resources>

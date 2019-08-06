@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/background_dialog_profile"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingTop="50dip"
+        android:paddingRight="@dimen/padding_5"
+        android:paddingBottom="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_brithday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_5"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="@dimen/com_facebook_profilepictureview_preset_size_normal"
+        android:layout_height="@dimen/com_facebook_profilepictureview_preset_size_normal"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/all_circle_color_primary_background"
+        android:padding="@dimen/padding_2" />
+</RelativeLayout>
